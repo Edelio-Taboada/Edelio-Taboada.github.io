@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riemann Sum Visualizer</title>
+  </head>
+  <body>
+      <label for="function">Function:</label>
+      <input type="text" id="function" size="10" value="x" onblur="myScript()"/> <br />
+      <br />
+      <label>Left boundary:</label>
+      <input type="text" id="lb" value="-10" size="5" onblur="myScript()"/>
+      <label> Right Boundary:</label>
+      <input type="text" id="rb" value="10" size="5" onblur="myScript()"/>
+      <br/>
+      <br/>
+      <label>Number of Shapes: </label>
+      <input type="text" id="n" value="10" size="5" onblur="myScript()"/>
+      <button type="button" onclick="toInfinity()">Go To Infinity!</button>
+      <br/>
+      <br/>
+      <form >
+        <input type="radio" id="left" value="left" onblur="myScript()" name="mode" checked="true">
+        <label for="left">Left Riemann Sum</label>
+        <input type="radio" id="right" value="right" onblur="myScript()" name="mode">
+        <label for="right">Right Riemann Sum</label>
+        <input type="radio" id="mid" value="mid" onblur="myScript()" name="mode">
+        <label for="mid">Midpoint Sum</label>
+        <input type="radio" id="trap" value="trap" name="mode" onblur="myScript()">
+        <label for="trap">Trapezoidal Sum</label>
+      </form>
+
+
+    </form>
+    <br />
+    <label id="area">Approximate Area: </label>
+    <script src="riemanVisualizer.js"></script>
+    <br/>
+    <br/>
+    <br/>
+    
+    
+  </body>
+  
+  <footer id="foot">
+    <a href="https://github.com/Edelio-Taboada/riemannSumVisualizer" target="_blank"><img src="./githubIcon.png" alt="Github Icon" width="50" height=auto></a>
+    <p>
+      This Riemann sum visualizer was created for educational purposes. It struggles with non-continuous functions. 
+    </p>
+    <p> <a href="https://www.mit.edu/~amini/LICENSE.md" target="_blank"> MIT License</a> Copyright (c) 2022 Edelio-Taboada
+      
+      </p>
+  </footer>
+</html>
